@@ -14,9 +14,9 @@ unzip master.zip
 cd smash-global-master/src
 cmake .
 make
-cp smash-global-map ..
-cp smash-global-visual ..
-cd ..
+cp smash-global-map ../../
+cp smash-global-visual ../../
+cd ../../
 </pre>
 This will create two binary files: 
 <pre>
