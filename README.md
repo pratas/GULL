@@ -11,7 +11,7 @@ Cmake is needed for installation (http://www.cmake.org/). You can download it di
 <pre>
 wget https://github.com/pratas/smash-global/archive/master.zip
 unzip master.zip
-cd src/smash-global-master
+cd smash-global-master/src
 cmake .
 make
 cp smash-global-map ..
