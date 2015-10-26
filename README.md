@@ -1,4 +1,4 @@
-# SMASH-CONTIGS #
+# SMASH-GLOBAL #
 
 <p align="center"><img src="imgs/logo.png" 
 alt="smash-global" width="200" height="200" border="0" /></p>
@@ -14,7 +14,8 @@ unzip master.zip
 cd smash-global-master
 cmake .
 make
-cp smash-global ..
+cp smash-global-map ..
+cp smash-global-visual ..
 cd ..
 </pre>
 This will create two binary files: 
