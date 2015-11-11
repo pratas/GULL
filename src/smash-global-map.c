@@ -288,14 +288,14 @@ int32_t main(int argc, char *argv[]){
     if(strcmp(xargv[n], "-c") == 0) 
       col = atoi(xargv[n+1]);
 
-  P->col        = ArgsNum    (col,   p, argc, "-c", 1, 200);
-  P->gamma      = ArgsDouble (gamma, p, argc, "-g");
-  P->gamma      = ((int)(P->gamma * 65536)) / 65536.0;
-  P->nFiles     = ReadFNames (P, argv[argc-1]);
-  P->output     = ArgsFileGen(p, argc, "-x", "matrix", ".csv");
-  P->labels     = ArgsFileGen(p, argc, "-o", "labels", ".csv");
-  FILE *OUTPUT  = Fopen(P->output, "w");
-  FILE *LABELS  = Fopen(P->labels, "w");
+  P->col       = ArgsNum    (col,   p, argc, "-c", 1, 200);
+  P->gamma     = ArgsDouble (gamma, p, argc, "-g");
+  P->gamma     = ((int)(P->gamma * 65536)) / 65536.0;
+  P->nFiles    = ReadFNames (P, argv[argc-1]);
+  P->output    = ArgsFileGen(p, argc, "-x", "matrix", ".csv");
+  P->labels    = ArgsFileGen(p, argc, "-o", "labels", ".csv");
+  FILE *OUTPUT = Fopen(P->output, "w");
+  FILE *LABELS = Fopen(P->labels, "w");
 
   if(P->nModels == 0){
     fprintf(stderr, "Error: at least you need to use a context model!\n");
@@ -359,6 +359,7 @@ int32_t main(int argc, char *argv[]){
   StopCalcAll(Time, clock());
   fprintf(stderr, "\n");
 
+  // STOP & 
   RemoveClock(Time);
   for(ref = 0 ; ref < P->nFiles ; ++ref)
     Free(T[ref].model);
