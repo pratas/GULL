@@ -1,5 +1,3 @@
-# SMASH-GLOBAL #
-
 <p align="center"><img src="imgs/logo.png" 
 alt="smash-global" width="200" height="200" border="0" /></p>
 
