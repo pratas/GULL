@@ -151,37 +151,38 @@ void *CompressThread(void *Thr){
 void LoadReference(Threads T){
   FILE     *Reader = Fopen(P->files[T.id], "r");
   uint32_t n;
+  uint64_t idx = 0;
+  uint64_t k, idxPos;
   PARSER   *PA = CreateParser();
   CBUF     *symBuf = CreateCBuffer(BUFFER_SIZE, BGUARD);
-  uint8_t  sym, irSym, *readBuf;
+  uint8_t  sym, irSym, *readBuf = Calloc(BUFFER_SIZE, sizeof(uint8_t)); 
   FileType(PA, Reader);
-  fclose(Reader);
-  struct   stat s;
-  size_t   size, k;
-  long     fd = open(P->files[T.id], O_RDONLY);
-
-  fstat (fd, & s);
-  size = s.st_size;
-  readBuf = (uint8_t *) mmap(0, size, PROT_READ, MAP_PRIVATE, fd, 0);
-  for(k = 0 ; k < size ; ++k){
-    if(ParseSym(PA, (sym = *readBuf++)) == -1) continue;
-    symBuf->buf[symBuf->idx] = sym = DNASymToNum(sym);
-    for(n = 0 ; n < P->nModels ; ++n){
-      GetPModelIdx(symBuf->buf+symBuf->idx-1, Models[n]);
-      UpdateCModelCounter(Models[n], sym, Models[n]->pModelIdx);
-      if(Models[n]->ir == 1){                         // INVERTED REPEATS
-        irSym = GetPModelIdxIR(symBuf->buf+symBuf->idx, Models[n]);
-        UpdateCModelCounter(Models[n], irSym, Models[n]->pModelIdxIR);
-        }
-      }
-    UpdateCBuffer(symBuf);
-    }
+  rewind(Reader);
  
+  while((k = fread(readBuf, 1, BUFFER_SIZE, Reader)))
+    for(idxPos = 0 ; idxPos < k ; ++idxPos){
+      if(ParseSym(PA, (sym = readBuf[idxPos])) == -1){ idx = 0; continue; }
+      symBuf->buf[symBuf->idx] = sym = DNASymToNum(sym);
+      for(n = 0 ; n < P->nModels ; ++n){
+        CModel *CM = Models[n];
+        GetPModelIdx(symBuf->buf+symBuf->idx-1, CM);
+        if(++idx > CM->ctx){
+          UpdateCModelCounter(CM, sym, CM->pModelIdx);
+          if(CM->ir == 1){                         // INVERTED REPEATS
+            irSym = GetPModelIdxIR(symBuf->buf+symBuf->idx, CM);
+            UpdateCModelCounter(CM, irSym, CM->pModelIdxIR);
+            }
+          }
+        }
+      UpdateCBuffer(symBuf);
+      }
+
   for(n = 0 ; n < P->nModels ; ++n)
     ResetCModelIdx(Models[n]);
   RemoveCBuffer(symBuf);
+  Free(readBuf);
   RemoveParser(PA);
-  close(fd);
+  fclose(Reader);
   }
 
 
