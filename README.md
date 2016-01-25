@@ -9,9 +9,8 @@ Smash-global is an alignment-free unsupervised tool to measure and visualise sim
 
 Cmake is needed for installation (http://www.cmake.org/). You can download it directly from http://www.cmake.org/cmake/resources/software.html or use an appropriate packet manager. In the following instructions we show the procedure to install smash-global:
 <pre>
-wget https://github.com/pratas/smash-global/archive/master.zip
-unzip master.zip
-cd smash-global-master/src
+git clone https://github.com/pratas/smash-global.git
+cd smash-global/src/
 cmake .
 make
 cp smash-global-map ../../
