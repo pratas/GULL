@@ -12,7 +12,7 @@ PARAM=" -m 20:100:1:3/10 -m 14:100:1:0/0 -m 12:1:0:0/0 -m 4:1:0:0/0 \
 ###############################################################################
 if [[ "$INSTALL" -eq "1" ]]; then
 # CLEAN & INSTALL =============================================================
-rm -fr goose-* smash-global-* goose/ smash-global/
+rm -fr goose-* smash-global-map smash-global-visual goose/ smash-global/
 # GET GOOSE FRAMEWORK =========================================================
 git clone https://github.com/pratas/goose.git
 cd goose/src/
