@@ -43,7 +43,7 @@ These will print the parameters that are needed to run both tools.
 
 On using this software/method please cite:
 
-paper: submitted.
+D. Pratas, R. M. Silva, A. J. Pinho, P. J. S. G. Ferreira. An alignment-free method to find and visualise rearrangements between pairs of DNA sequences. Sci. Rep. 5, 10203; doi: 10.1038/srep10203 (2015).
 
 ## ISSUES ##
 
