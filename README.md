@@ -91,6 +91,9 @@ Report bugs to &#60{pratas,ap,pjf}@ua.pt&#62.
 
 ## EXAMPLE ##
 
+The following map shows and example while measuring similarity between human (HS), chimpanzee (PT) and gorilla (GG) chromosome sequences,
+including unplaced (UP), unlocalized (UL) and mitocondrial (MT) sequences.
+
 ![ScreenShot](/imgs/mapHSPTGG.png)
 
 
