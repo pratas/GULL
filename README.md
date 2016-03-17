@@ -89,6 +89,11 @@ Mandatory arguments:
 Report bugs to &#60{pratas,ap,pjf}@ua.pt&#62.   
 </pre>
 
+## EXAMPLE ##
+
+![ScreenShot](/imgs/mapHSPTGG.png)
+
+
 ## CITATION ##
 
 On using this software/method please cite:
