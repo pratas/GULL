@@ -1,7 +1,7 @@
 <p align="center"><img src="imgs/logo.png" 
 alt="smash-global" width="200" height="200" border="0" /></p>
 
-<b>Smash-global is an alignment-free unsupervised tool to measure and visualise relative similarity between DNA sequences.</b>
+<b>Smash-global is an alignment-free unsupervised tool to measure and visualise similarity between DNA sequences.</b>
 
 ## INSTALLATION ##
 
