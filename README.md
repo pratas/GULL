@@ -38,12 +38,60 @@ or
 ./smash-global-visual -h
 </pre>
 These will print the parameters that are needed to run both tools.
+For smash-global-map:
+<pre>
+Usage: smash-global-map [OPTION]... [FILE1]:[FILE2]:...                  
+A similarity matrix builder using relative information.                  
+                                                                         
+Non-mandatory arguments:                                                 
+                                                                         
+  -h                       give this help,                               
+  -V                       display version number,                       
+  -v                       verbose mode (more information),              
+  -s                       how compression levels,                       
+  -l &#60level&#62               compression level [1;30],                     
+  -n &#60nThreads&#62            number of threads,                            
+  -x &#60FILE&#62                similarity matrix filename,                   
+  -o &#60FILE&#62                labels filename,                              
+                                                                         
+Mandatory arguments:                                                     
+                                                                         
+  &#60FILE&#62:&#60FILE&#62:&#60...&#62      input files (last arguments).                 
+                           Use ":" for file splitting.                 
+                                                                         
+Report bugs to &#60{pratas,ap,pjf}@ua.pt&#62.                
+</pre>
+For smash-global-visual:
+<pre>
+Usage: smash-global-visual [OPTION]... [FILE]                            
+A visual heatmap builder for any similarity matrix.                      
+                                                                         
+Non-mandatory arguments:                                                 
+                                                                         
+  -h                       give this help,                               
+  -V                       display version number,                       
+  -v                       verbose mode (more information),              
+  -w                       square width (for each value),                
+  -a                       square inter-space (between each value),      
+  -s                       index color start,                            
+  -r                       index color rotations,                        
+  -u                       color hue,                                    
+  -g                       color gamma,                                  
+  -l &#60FILE&#62                labels filename,                              
+  -x &#60FILE&#62                heatmap filename,                             
+                                                                         
+Mandatory arguments:                                                     
+                                                                         
+  &#60FILE&#62                   input matrix file (last argument).            
+                                                                         
+Report bugs to &#60{pratas,ap,pjf}@ua.pt&#62.   
+</pre>
 
 ## CITATION ##
 
 On using this software/method please cite:
 
-D. Pratas, R. M. Silva, A. J. Pinho, P. J. S. G. Ferreira. An alignment-free method to find and visualise rearrangements between pairs of DNA sequences. Sci. Rep. 5, 10203; doi: 10.1038/srep10203 (2015).
+Paper submitted.
 
 ## ISSUES ##
 
