@@ -103,8 +103,8 @@ double width, double space){
   if(P->nFiles > 4)
     Text90d(Plot, -DEFAULT_CX - ((size/2)+46), DEFAULT_CX-(Paint->width*2 + 2), 
     "SIMILARITY");
-  Text   (Plot, DEFAULT_CX-(Paint->width*2 + 14), Paint->cy+13, "1");
-  Text   (Plot, DEFAULT_CX-(Paint->width*2 + 14), Paint->cy+size, "0");
+  Text   (Plot, DEFAULT_CX-(Paint->width*2 + 14), Paint->cy+13, "+");
+  Text   (Plot, DEFAULT_CX-(Paint->width*2 + 14), Paint->cy+size, "-");
 
   for(ref = 0 ; ref < P->nFiles ; ++ref){
     for(tar = P->nFiles ; tar-- ; ){ // INVERT LOOP: INCREASE SPEED OF LEARNING
