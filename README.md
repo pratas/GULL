@@ -1,27 +1,27 @@
 <p align="center"><img src="imgs/logo.png" 
-alt="smash-global" width="200" height="200" border="0" /></p>
+alt="GULL" width="200" height="200" border="0" /></p>
 
-<b>Smash-global is an alignment-free unsupervised tool to measure and visualise similarity between DNA sequences.</b>
+<b>GULL is a tool for measuring relative similarity between non-assembled genomic sequences without supervision.</b>
 
 ## INSTALLATION ##
 
-Cmake is needed for installation (http://www.cmake.org/). You can download it directly from http://www.cmake.org/cmake/resources/software.html or use an appropriate packet manager. In the following instructions we show the procedure to install smash-global:
+Cmake is needed for installation (http://www.cmake.org/). You can download it directly from http://www.cmake.org/cmake/resources/software.html or use an appropriate packet manager. In the following instructions we show the procedure to install GULL:
 <pre>
-git clone https://github.com/pratas/smash-global.git
-cd smash-global/src/
+git clone https://github.com/pratas/GULL.git
+cd GULL/src/
 cmake .
 make
-cp smash-global-map ../../
-cp smash-global-visual ../../
+cp GULL-map ../../
+cp GULL-visual ../../
 cd ../../
 </pre>
 This will create two binary files: 
 <pre>
-smash-global-map 
+GULL-map 
 </pre>
 to measure the similarity between sequences and
 <pre>
-smash-global-visual
+GULL-visual
 </pre>
 to visualise the similarity in a heatmap scheme.
 
@@ -29,19 +29,19 @@ to visualise the similarity in a heatmap scheme.
 
 To see the possible options type
 <pre>
-./smash-global-map
-./smash-global-visual
+./GULL-map
+./GULL-visual
 </pre>
 or
 <pre>
-./smash-global-map -h
-./smash-global-visual -h
+./GULL-map -h
+./GULL-visual -h
 </pre>
 These will print the parameters that are needed to run both tools.
 
-For smash-global-map:
+For GULL-map:
 <pre>
-Usage: smash-global-map [OPTION]... [FILE1]:[FILE2]:...                  
+Usage: GULL-map [OPTION]... [FILE1]:[FILE2]:...                  
 A similarity matrix builder using relative information.                  
                                                                          
 Non-mandatory arguments:                                                 
@@ -60,12 +60,12 @@ Mandatory arguments:
   &#60FILE&#62:&#60FILE&#62:&#60...&#62      input files (last arguments).                 
                            Use ":" for file splitting.                 
                                                                          
-Report bugs to &#60{pratas,ap,pjf}@ua.pt&#62.                
+Report bugs to &#60{pratas,raquelsilva,ap,pjf}@ua.pt&#62.                
 </pre>
 
-For smash-global-visual:
+For GULL-visual:
 <pre>
-Usage: smash-global-visual [OPTION]... [FILE]                            
+Usage: GULL-visual [OPTION]... [FILE]                            
 A visual heatmap builder for any similarity matrix.                      
                                                                          
 Non-mandatory arguments:                                                 
@@ -86,7 +86,7 @@ Mandatory arguments:
                                                                          
   &#60FILE&#62                   input matrix file (last argument).            
                                                                          
-Report bugs to &#60{pratas,ap,pjf}@ua.pt&#62.   
+Report bugs to &#60{pratas,raquelsilva,ap,pjf}@ua.pt&#62.   
 </pre>
 
 ## EXAMPLE ##
@@ -105,7 +105,7 @@ Paper submitted.
 
 ## ISSUES ##
 
-For any issue let us know at [issues link](https://github.com/pratas/smash-global/issues).
+For any issue let us know at [issues link](https://github.com/pratas/GULL/issues).
 
 ## LICENSE ##
 

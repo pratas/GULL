@@ -19,8 +19,9 @@ void ModelsExplanation(void){
 
 void PrintMenu(void){
   fprintf(stderr,
-  "Usage: smash-global-map [OPTION]... [FILE1]:[FILE2]:...                  \n"
-  "A similarity matrix builder using relative information.                  \n"
+  "Usage: GULL-map [OPTION]... [FILE1]:[FILE2]:...                  \n"
+  "A tool for measuring relative similarity between \n"
+  "non-assembled genomic sequences without supervision.                \n"
   "                                                                         \n"
   "Non-mandatory arguments:                                                 \n"
   "                                                                         \n"
@@ -38,12 +39,12 @@ void PrintMenu(void){
   "  <FILE>:<FILE>:<...>      input files (last arguments).                 \n"
   "                           Use \":\" for file splitting.                 \n"
   "                                                                         \n"
-  "Report bugs to <{pratas,ap,pjf}@ua.pt>.                                \n");
+  "Report bugs to <{pratas,raquelsilva,ap,pjf}@ua.pt>.                      \n");
   }
 
 void PrintMenuVisual(void){
   fprintf(stderr,
-  "Usage: smash-global-visual [OPTION]... [FILE]                            \n"
+  "Usage: GULL-visual [OPTION]... [FILE]                            \n"
   "A visual heatmap builder for any similarity matrix.                      \n"
   "                                                                         \n"
   "Non-mandatory arguments:                                                 \n"
@@ -64,18 +65,19 @@ void PrintMenuVisual(void){
   "                                                                         \n"
   "  <FILE>                   input matrix file (last argument).            \n"
   "                                                                         \n"
-  "Report bugs to <{pratas,ap,pjf}@ua.pt>.                                \n");
+  "Report bugs to <{pratas,raquelsilva,ap,pjf}@ua.pt>.                      \n");
   }
 
 void PrintVersion(void){
   fprintf(stderr,
   "                                                                         \n"
   "                       ========================                          \n"
-  "                       | smash-global-map %u.%u |                        \n"
+  "                       |     GULL-map %u.%u     |                        \n"
   "                       ========================                          \n"
   "                                                                         \n"
-  "smash-global-map: similarity matrix builder with relative information.   \n"
-  "Copyright (C) 2014-2015 University of Aveiro. This is a Free software.   \n"
+  "    GULL-map: a tool for measuring relative similarity between\n"
+  "    non-assembled genomic sequences without supervision.  \n\n"
+  "Copyright (C) 2014-2016 University of Aveiro. This is a Free software.   \n"
   "You may redistribute copies of it under the terms of the GNU - General   \n"
   "Public License v2 <http://www.gnu.org/licenses/gpl.html>. There is NOT   \n"
   "ANY WARRANTY, to the extent permitted by law. Developed and Written by   \n"
@@ -87,10 +89,10 @@ void PrintVersionVisual(void){
   fprintf(stderr,
   "                                                                         \n"
   "                      ===========================                        \n"
-  "                      | smash-global-visual %u.%u |                      \n"
+  "                      |     GULL-visual %u.%u     |                      \n"
   "                      ===========================                        \n"
   "                                                                         \n"
-  "smash-global-visual: visual heatmap builder for any similarity matrix.   \n"
+  "    GULL-visual: visual heatmap builder for any similarity matrix.     \n\n"
   "Copyright (C) 2014-2016 University of Aveiro. This is a Free software.   \n"
   "You may redistribute copies of it under the terms of the GNU - General   \n"
   "Public License v2 <http://www.gnu.org/licenses/gpl.html>. There is NOT   \n"
