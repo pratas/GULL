@@ -42,8 +42,8 @@ These will print the parameters that are needed to run both tools.
 For GULL-map:
 <pre>
 Usage: GULL-map [OPTION]... [FILE1]:[FILE2]:...                  
-A similarity matrix builder using relative information.                  
-                                                                         
+A tool for measuring relative similarity between 
+non-assembled genomic sequences without supervision.                                                                        
 Non-mandatory arguments:                                                 
                                                                          
   -h                       give this help,                               
