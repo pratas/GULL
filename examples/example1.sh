@@ -20,7 +20,7 @@ make
 cd ../../
 cp goose/src/goose-* .
 cp goose/scripts/Get* .
-# GET FALCON ==================================================================
+# GET GULL ====================================================================
 git clone https://github.com/pratas/GULL.git
 cd GULL/src/
 cmake .
