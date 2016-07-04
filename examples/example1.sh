@@ -46,10 +46,9 @@ for((x=1 ; x<30 ; ++x));
  do
  mv CHIR$x CH$x;
  done
-mv CH30 CHX
-mv CH31 CH_UP
-mv CH32 CH_MT
-
+mv CHIR30 CHX
+mv CHIR31 CH_UP
+mv CHIR32 CH_MT
 fi
 ###############################################################################
 if [[ "$GULL" -eq "1" ]]; then
