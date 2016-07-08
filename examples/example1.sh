@@ -33,11 +33,11 @@ fi
 ###############################################################################
 if [[ "$DOWNLOAD" -eq "1" ]]; then
 #bact&vir
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Enterobacter_cloacae/reference/GCF_000025565.1_ASM2556v1/GCF_000025565.1_ASM2556v1_genomic.fna.gz -o EN_CO.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Enterobacter_cloacae/reference/GCF_000025565.1_ASM2556v1/GCF_000025565.1_ASM2556v1_genomic.fna.gz -O EN_CO.gz
 gunzip EN_CO.gz
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Escherichia_coli/reference/GCF_000008865.1_ASM886v1/GCF_000008865.1_ASM886v1_genomic.fna.gz -o ES_CO.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Escherichia_coli/reference/GCF_000008865.1_ASM886v1/GCF_000008865.1_ASM886v1_genomic.fna.gz -O ES_CO.gz
 gunzip ES_CO.gz
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Salmonella_enterica/reference/GCF_000006945.1_ASM694v1/GCF_000006945.1_ASM694v1_genomic.fna.gz -o SA_EN.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Salmonella_enterica/reference/GCF_000006945.1_ASM694v1/GCF_000006945.1_ASM694v1_genomic.fna.gz -O SA_EN.gz
 gunzip SA_EN.gz
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Mycobacterium_tuberculosis/reference/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz -O MY_TU.gz
 gunzip MY_TU.gz
