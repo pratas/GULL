@@ -47,6 +47,8 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/viral/Avian_carcinoma_virus/lates
 gunzip AV_CA.gz
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/viral/Bacillus_phage_Bam35/latest_assembly_versions/GCF_000841545.1_ViralProj14311/GCF_000841545.1_ViralProj14311_genomic.fna.gz -O BA_PH.gz
 gunzip BA_PH.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/viral/Enterobacteria_phage_phiX174_sensu_lato/latest_assembly_versions/GCF_000819615.1_ViralProj14015/GCF_000819615.1_ViralProj14015_genomic.fna.gz -O EN_PH.gz
+gunzip EN_PH.gz
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/viral/Baminivirus/latest_assembly_versions/GCF_000917875.1_ViralProj242951/GCF_000917875.1_ViralProj242951_genomic.fna.gz -O BA_VI.gz
 gunzip BA_VI.gz
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/viral/Citrus_tristeza_virus/latest_assembly_versions/GCF_000862265.1_ViralProj15334/GCF_000862265.1_ViralProj15334_genomic.fna.gz -O CI_TR.gz
@@ -81,7 +83,7 @@ mv CHIR32 CH_MT
 fi
 ###############################################################################
 if [[ "$GULL" -eq "1" ]]; then
-(time ./GULL-map -v $PARAM -n 14 -x MATRIX -o LABELS HS1:HS2:HS3:HS4:HS5:HS6:HS7:HS8:HS9:HS10:HS11:HS12:HS13:HS14:HS15:HS16:HS17:HS18:HS19:HS20:HS21:HS22:HSX:HSY:HS_UL:HS_UP:HS_MT:GG1:GG2A:GG2B:GG3:GG4:GG5:GG6:GG7:GG8:GG9:GG10:GG11:GG12:GG13:GG14:GG15:GG16:GG17:GG18:GG19:GG20:GG21:GG22:GGX:GG_UP:GG_MT:CH3:CH4:CH16:CH18:EN_CO:ES_CO:SA_EN:MY_TU:NI_GO:AV_CA:BA_PH:BA_VI:CI_TR:CU_CA:FA_PE:HA_LE:HA_AL ) &> REPORT
+(time ./GULL-map -v $PARAM -n 14 -x MATRIX -o LABELS HS1:HS2:HS3:HS4:HS5:HS6:HS7:HS8:HS9:HS10:HS11:HS12:HS13:HS14:HS15:HS16:HS17:HS18:HS19:HS20:HS21:HS22:HSX:HSY:HS_UL:HS_UP:HS_MT:GG1:GG2A:GG2B:GG3:GG4:GG5:GG6:GG7:GG8:GG9:GG10:GG11:GG12:GG13:GG14:GG15:GG16:GG17:GG18:GG19:GG20:GG21:GG22:GGX:GG_UP:GG_MT:CH3:CH4:CH16:CH18:EN_CO:ES_CO:SA_EN:MY_TU:NI_GO:AV_CA:BA_PH:EN_PH:BA_VI:CI_TR:CU_CA:FA_PE:HA_LE:HA_AL ) &> REPORT
 fi
 ###############################################################################
 if [[ "$VISUAL" -eq "1" ]]; then
