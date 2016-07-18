@@ -90,5 +90,7 @@ if [[ "$VISUAL" -eq "1" ]]; then
 ./GULL-visual -v -l LABELS -x HEATMAP.svg MATRIX
 ###############################################################################
 convert HEATMAP.svg HEATMAP.pdf
+pdfcrop --margins '-260 -260 -260 -260' HEATMAP.pdf MAP.pdf
+cp MAP.pdf ../imgs/
 ###############################################################################
 
