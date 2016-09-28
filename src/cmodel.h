@@ -98,9 +98,9 @@ void            HitSUBS              (CModel *);
 void            FailSUBS             (CModel *);
 void            FreeCModel           (CModel *);
 void            FreeShadow           (CModel *);
-inline void     GetPModelIdx         (U8 *, CModel *);
-inline U8       GetPModelIdxIR       (U8 *, CModel *);
-inline uint64_t GetPModelIdxCorr     (U8 *, CModel *, uint64_t);
+void            GetPModelIdx         (U8 *, CModel *);
+U8              GetPModelIdxIR       (U8 *, CModel *);
+uint64_t        GetPModelIdxCorr     (U8 *, CModel *, uint64_t);
 void            CorrectCModelSUBS    (CModel *, PModel *, uint8_t);
 PModel          *CreatePModel        (U32);
 FloatPModel     *CreateFloatPModel   (U32);
@@ -110,8 +110,8 @@ void            ResetCModelIdx       (CModel *);
 void            UpdateCModelCounter  (CModel *, U32, U64);
 CModel          *CreateCModel        (U32, U32, U32, U8, U32, U32, U32);
 CModel          *CreateShadowModel   (CModel *);
-inline void     ComputePModel        (CModel *, PModel *, uint64_t, uint32_t);
-inline void     ComputeWeightedFreqs (double, PModel *, FloatPModel *);
+void            ComputePModel        (CModel *, PModel *, uint64_t, uint32_t);
+void            ComputeWeightedFreqs (double, PModel *, FloatPModel *);
 double          PModelSymbolLog      (PModel *, U32);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
