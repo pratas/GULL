@@ -290,7 +290,7 @@ fi
 # PLOT
 if [[ "$RUN_PLOT" -eq "1" ]]; then
 rm -f DATAP;
-printf "GRenEn\t%s\n" `cat results/BC_GREEN_HS5-PT5 results/BC_GREEN_HS5-GG5 results/BC_GREEN_HS8-PT8 results/BC_GREEN_HS8-GG8 results/BC_GREEN_HS11-PT11 results/BC_GREEN_HS11-GG11 results/BC_GREEN_HS14-PT14 results/BC_GREEN_HS14-GG14 results/BC_GREEN_HS17-PT17 results/BC_GREEN_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
+printf "GReEn\t%s\n" `cat results/BC_GREEN_HS5-PT5 results/BC_GREEN_HS5-GG5 results/BC_GREEN_HS8-PT8 results/BC_GREEN_HS8-GG8 results/BC_GREEN_HS11-PT11 results/BC_GREEN_HS11-GG11 results/BC_GREEN_HS14-PT14 results/BC_GREEN_HS14-GG14 results/BC_GREEN_HS17-PT17 results/BC_GREEN_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
 printf "iDoComp\t%s\n" `cat results/BC_IDOCOMP_HS5-PT5 results/BC_IDOCOMP_HS5-GG5 results/BC_IDOCOMP_HS8-PT8 results/BC_IDOCOMP_HS8-GG8 results/BC_IDOCOMP_HS11-PT11 results/BC_IDOCOMP_HS11-GG11 results/BC_IDOCOMP_HS14-PT14 results/BC_IDOCOMP_HS14-GG14 results/BC_IDOCOMP_HS17-PT17 results/BC_IDOCOMP_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
 printf "GDC2\t%s\n" `cat results/BC_GDC_HS5-PT5 results/BC_GDC_HS5-GG5 results/BC_GDC_HS8-PT8 results/BC_GDC_HS8-GG8 results/BC_GDC_HS11-PT11 results/BC_GDC_HS11-GG11 results/BC_GDC_HS14-PT14 results/BC_GDC_HS14-GG14 results/BC_GDC_HS17-PT17 results/BC_GDC_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
 printf "Proposed\t%s\n" `cat results/BC_GECO_REF_HS5-PT5 results/BC_GECO_REF_HS5-GG5 results/BC_GECO_REF_HS8-PT8 results/BC_GECO_REF_HS8-GG8 results/BC_GECO_REF_HS11-PT11 results/BC_GECO_REF_HS11-GG11 results/BC_GECO_REF_HS14-PT14 results/BC_GECO_REF_HS14-GG14 results/BC_GECO_REF_HS17-PT17 results/BC_GECO_REF_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
