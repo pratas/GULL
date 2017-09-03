@@ -1,17 +1,17 @@
 #!/bin/bash
 ###############################################################################
-INSTALL_GDC2=0;
-INSTALL_IDOCOMP=0;
-INSTALL_GREEN=0;
-INSTALL_GECO=0;
+INSTALL_GDC2=1;
+INSTALL_IDOCOMP=1;
+INSTALL_GREEN=1;
+INSTALL_GECO=1;
 ###############################################################################
-DOWNLOAD=0;
-PARSE=0;
+DOWNLOAD=1;
+PARSE=1;
 ###############################################################################
-RUN_GDC2=0;
-RUN_IDOCOMP=0;
-RUN_GREEN=0;
-RUN_GECO=0;
+RUN_GDC2=1;
+RUN_IDOCOMP=1;
+RUN_GREEN=1;
+RUN_GECO=1; # GECO WITH SPECIFIC PARAMETERS SIMULATES GULL
 ###############################################################################
 RUN_PLOT=1;
 ###############################################################################
@@ -293,7 +293,7 @@ rm -f DATAP;
 printf "GReEn\t%s\n" `cat results/BC_GREEN_HS5-PT5 results/BC_GREEN_HS5-GG5 results/BC_GREEN_HS8-PT8 results/BC_GREEN_HS8-GG8 results/BC_GREEN_HS11-PT11 results/BC_GREEN_HS11-GG11 results/BC_GREEN_HS14-PT14 results/BC_GREEN_HS14-GG14 results/BC_GREEN_HS17-PT17 results/BC_GREEN_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
 printf "iDoComp\t%s\n" `cat results/BC_IDOCOMP_HS5-PT5 results/BC_IDOCOMP_HS5-GG5 results/BC_IDOCOMP_HS8-PT8 results/BC_IDOCOMP_HS8-GG8 results/BC_IDOCOMP_HS11-PT11 results/BC_IDOCOMP_HS11-GG11 results/BC_IDOCOMP_HS14-PT14 results/BC_IDOCOMP_HS14-GG14 results/BC_IDOCOMP_HS17-PT17 results/BC_IDOCOMP_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
 printf "GDC2\t%s\n" `cat results/BC_GDC_HS5-PT5 results/BC_GDC_HS5-GG5 results/BC_GDC_HS8-PT8 results/BC_GDC_HS8-GG8 results/BC_GDC_HS11-PT11 results/BC_GDC_HS11-GG11 results/BC_GDC_HS14-PT14 results/BC_GDC_HS14-GG14 results/BC_GDC_HS17-PT17 results/BC_GDC_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
-printf "Proposed\t%s\n" `cat results/BC_GECO_REF_HS5-PT5 results/BC_GECO_REF_HS5-GG5 results/BC_GECO_REF_HS8-PT8 results/BC_GECO_REF_HS8-GG8 results/BC_GECO_REF_HS11-PT11 results/BC_GECO_REF_HS11-GG11 results/BC_GECO_REF_HS14-PT14 results/BC_GECO_REF_HS14-GG14 results/BC_GECO_REF_HS17-PT17 results/BC_GECO_REF_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
+printf "GULL\t%s\n" `cat results/BC_GECO_REF_HS5-PT5 results/BC_GECO_REF_HS5-GG5 results/BC_GECO_REF_HS8-PT8 results/BC_GECO_REF_HS8-GG8 results/BC_GECO_REF_HS11-PT11 results/BC_GECO_REF_HS11-GG11 results/BC_GECO_REF_HS14-PT14 results/BC_GECO_REF_HS14-GG14 results/BC_GECO_REF_HS17-PT17 results/BC_GECO_REF_HS17-GG17 | awk '{s+=$1}END{print s}'` >> DATAP
 fi
 ###############################################################################
 echo "set terminal pdfcairo enhanced color
