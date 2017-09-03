@@ -336,8 +336,13 @@ int32_t main(int argc, char *argv[]){
 
   fprintf(stderr, "==[ PROCESSING ]====================\n");
   TIME *Time = CreateClock(clock());
-  for(n = 0 ; n < P->nFiles ; ++n)
+  for(n = 0 ; n < P->nFiles ; ++n){
     CompressAction(T, n);
+    for(k = 0 ; k < P->nFiles ; ++k){
+      fprintf(stderr, "%.4lf\t", P->matrix[n][k]);
+      }
+    fprintf(stderr, "\n");
+    }
   StopTimeNDRM(Time, clock());
   fprintf(stderr, "\n");
 
