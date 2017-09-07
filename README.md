@@ -1,7 +1,7 @@
 <p align="center"><img src="imgs/logo.png" 
 alt="GULL" width="200" height="200" border="0" /></p>
 
-<b>GULL is a tool for measuring relative similarity between non-assembled genomic sequences without supervision.</b>
+<b>GULL is an unsupervised tool for measuring relative similarity between non-assembled genomic sequences.</b>
 
 ## INSTALLATION ##
 
