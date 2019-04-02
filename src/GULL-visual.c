@@ -107,7 +107,8 @@ double width, double space){
   Text   (Plot, DEFAULT_CX-(Paint->width*2 + 14), Paint->cy+size, "-");
 
   for(ref = 0 ; ref < P->nFiles ; ++ref){
-    for(tar = P->nFiles ; tar-- ; ){ // INVERT LOOP: INCREASE SPEED OF LEARNING
+    //for(tar = P->nFiles ; tar-- ; ){ // INVERT LOOP TO INVERT HORIZONTAL ORDER
+    for(tar = 0 ; tar < P->nFiles ; ++tar){ 
       char color[12];
       Rect(Plot, Paint->width, Paint->width, Paint->cx, Paint->cy, 
       HeatMapColor(BoundDouble(0.0, P->matrix[ref][tar], 1.0), color, CLR));
@@ -115,8 +116,11 @@ double width, double space){
       }
     // TEXT HAS 16 PX -> CALCULATE AVERAGE POSITION
     Text   (Plot, Paint->cx + 4, (Paint->cy+Paint->width/2)+6, P->files[ref]);
-    Text90d(Plot, 4-DEFAULT_CX, (Paint->cy+Paint->width/2)+10, 
-    P->files[P->nFiles-1-ref]);
+
+    // USE THE FOLLOWING TO INVERT THE NAMES ORDER -> THEN CHANGE IN THE SQUARES
+    //Text90d(Plot, 4-DEFAULT_CX, (Paint->cy+Paint->width/2)+10, P->files[P->nFiles-1-ref]);
+    Text90d(Plot, 4-DEFAULT_CX, (Paint->cy+Paint->width/2)+10, P->files[ref]);
+
     Paint->cx =  DEFAULT_CX;
     Paint->cy += Paint->width + Paint->space;
     }
